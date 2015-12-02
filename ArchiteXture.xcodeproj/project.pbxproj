@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A451D391C0D03C3001B8136 /* Template_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A451D371C0D03C3001B8136 /* Template_VC.m */; };
+		4A451D3A1C0D03C3001B8136 /* Template_VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A451D381C0D03C3001B8136 /* Template_VC.xib */; };
 		4A58F72D1C0B7403002F125B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A58F7141C0B7403002F125B /* AppDelegate.m */; };
 		4A58F72E1C0B7403002F125B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A58F7151C0B7403002F125B /* LaunchScreen.storyboard */; };
 		4A58F72F1C0B7403002F125B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A58F7171C0B7403002F125B /* Main.storyboard */; };
 		4A58F7311C0B7403002F125B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A58F71A1C0B7403002F125B /* main.m */; };
 		4A58F7321C0B7403002F125B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A58F71E1C0B7403002F125B /* Assets.xcassets */; };
-		4A58F7331C0B7403002F125B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A58F72C1C0B7403002F125B /* ViewController.m */; };
+		4A58F7331C0B7403002F125B /* RingProfile_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A58F72C1C0B7403002F125B /* RingProfile_VC.m */; };
 		4AC7EC351C0B762B0006FB09 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7EC341C0B762B0006FB09 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A451D361C0D03C3001B8136 /* Template_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Template_VC.h; sourceTree = "<group>"; };
+		4A451D371C0D03C3001B8136 /* Template_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Template_VC.m; sourceTree = "<group>"; };
+		4A451D381C0D03C3001B8136 /* Template_VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Template_VC.xib; sourceTree = "<group>"; };
 		4A58F6E81C0B701A002F125B /* ArchiteXture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchiteXture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A58F7131C0B7403002F125B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A58F7141C0B7403002F125B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -25,8 +30,8 @@
 		4A58F7191C0B7403002F125B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A58F71A1C0B7403002F125B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A58F71E1C0B7403002F125B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4A58F72B1C0B7403002F125B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4A58F72C1C0B7403002F125B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4A58F72B1C0B7403002F125B /* RingProfile_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingProfile_VC.h; sourceTree = "<group>"; };
+		4A58F72C1C0B7403002F125B /* RingProfile_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RingProfile_VC.m; sourceTree = "<group>"; };
 		4A58F7361C0B74F8002F125B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		4A58F7371C0B74F9002F125B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4A58F7381C0B7500002F125B /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Main.strings; sourceTree = "<group>"; };
@@ -193,8 +198,9 @@
 			isa = PBXGroup;
 			children = (
 				4A58F72A1C0B7403002F125B /* common */,
-				4A58F72B1C0B7403002F125B /* ViewController.h */,
-				4A58F72C1C0B7403002F125B /* ViewController.m */,
+				4A451D361C0D03C3001B8136 /* Template_VC.h */,
+				4A451D371C0D03C3001B8136 /* Template_VC.m */,
+				4A451D381C0D03C3001B8136 /* Template_VC.xib */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 		4A58F72A1C0B7403002F125B /* common */ = {
 			isa = PBXGroup;
 			children = (
+				4A58F72B1C0B7403002F125B /* RingProfile_VC.h */,
+				4A58F72C1C0B7403002F125B /* RingProfile_VC.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -265,6 +273,7 @@
 			files = (
 				4A58F72E1C0B7403002F125B /* LaunchScreen.storyboard in Resources */,
 				4AC7EC351C0B762B0006FB09 /* Localizable.strings in Resources */,
+				4A451D3A1C0D03C3001B8136 /* Template_VC.xib in Resources */,
 				4A58F72F1C0B7403002F125B /* Main.storyboard in Resources */,
 				4A58F7321C0B7403002F125B /* Assets.xcassets in Resources */,
 			);
@@ -277,7 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A58F7331C0B7403002F125B /* ViewController.m in Sources */,
+				4A451D391C0D03C3001B8136 /* Template_VC.m in Sources */,
+				4A58F7331C0B7403002F125B /* RingProfile_VC.m in Sources */,
 				4A58F7311C0B7403002F125B /* main.m in Sources */,
 				4A58F72D1C0B7403002F125B /* AppDelegate.m in Sources */,
 			);
@@ -395,6 +405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/ArchiteXture/main/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.jmramirez.ArchiteXture;
 				PRODUCT_NAME = ArchiteXture;
@@ -406,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/ArchiteXture/main/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.jmramirez.ArchiteXture;
 				PRODUCT_NAME = ArchiteXture;
