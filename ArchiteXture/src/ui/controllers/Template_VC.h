@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+ 
 @interface Template_VC : UIView <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *allRingsScrollView;
@@ -22,8 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *mapImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *carouselImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *smallTitleImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *bigTitleImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *smallTitleImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *bigTitleImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *blurryBackgroundImageView;
 

@@ -10,6 +10,8 @@
 
 @interface Template_VC ()
 
+@property (nonatomic, assign) BOOL canAnimate;
+
 @end
 
 @implementation Template_VC
@@ -27,20 +29,25 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    [self showBlurryBackgroundInScrollView:scrollView];
+}
+
+#pragma mark - Private methods
+
+- (void)showBlurryBackgroundInScrollView:(UIScrollView *)scrollView
+{
     if (scrollView.contentOffset.y > 284) {
         [self showBlurryBackground:YES];
     } else {
         [self showBlurryBackground:NO];
     }
     
-    if (scrollView.contentOffset.y > 100) {
+    if (scrollView.contentOffset.y > 500) {
         [self showSmallNavigationBar:YES];
     } else {
         [self showSmallNavigationBar:NO];
     }
 }
-
-#pragma mark - Private methods
 
 - (void)showBlurryBackground:(BOOL)flag
 {
@@ -56,12 +63,30 @@
 - (void)showSmallNavigationBar:(BOOL)flag
 {
     if(flag) {
-        [_bigTitleImageView setHidden:YES];
-        [_smallTitleImageView setHidden:NO];
+        if (_canAnimate) {
+            [_bigTitleImageView setHidden:YES];
+            [_smallTitleImageView setHidden:NO];
+            [self fadeAnimation:_smallTitleImageView];
+            _canAnimate = !_canAnimate;
+        }
     } else {
-        [_bigTitleImageView setHidden:NO];
-        [_smallTitleImageView setHidden:YES];
+        if (!_canAnimate){
+            [_bigTitleImageView setHidden:NO];
+            [_smallTitleImageView setHidden:YES];
+            [self fadeAnimation:_bigTitleImageView];
+            _canAnimate = !_canAnimate;
+        }
     }
+}
+
+- (void)fadeAnimation:(UIImageView *)imageView
+{
+    imageView.alpha = 0;
+    
+    [UIView beginAnimations:@"fade in" context:nil];
+    [imageView setAnimationDuration:3.0];
+    imageView.alpha = 1.0;
+    [UIView commitAnimations];
 }
 
 @end

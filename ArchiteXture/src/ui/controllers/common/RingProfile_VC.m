@@ -22,9 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self setupHapinessRing];
     [self setupFancyRing];
+    
+    [_fancyView.smallTitleImageView setHidden:YES];
+    [_happinessView.smallTitleImageView setHidden:YES];
 }
 
 - (void)setupHapinessRing
