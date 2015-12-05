@@ -6,15 +6,18 @@
 //  Copyright © 2015 Jose Manuel Ramírez Martínez. All rights reserved.
 //
 
-#import "Template_VC.h"
+#import "TemplateView.h"
 
-@interface Template_VC ()
+static const CGFloat alphaConstant = 0.05;
+
+@interface TemplateView ()
 
 @property (nonatomic, assign) BOOL canAnimate;
+@property (nonatomic, assign) CGFloat i;
 
 @end
 
-@implementation Template_VC
+@implementation TemplateView
 
 - (id)init
 {
@@ -22,6 +25,7 @@
                                                  owner:self
                                                options:nil] firstObject];
     if (!self) return nil;
+    _i = 0.0;
     return self;
 }
 
@@ -29,14 +33,14 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [self showBlurryBackgroundInScrollView:scrollView];
+    [self animateObjectsInScrollView:scrollView];
 }
 
 #pragma mark - Private methods
 
-- (void)showBlurryBackgroundInScrollView:(UIScrollView *)scrollView
+- (void)animateObjectsInScrollView:(UIScrollView *)scrollView
 {
-    if (scrollView.contentOffset.y > 284) {
+    if (scrollView.contentOffset.y > 150) {
         [self showBlurryBackground:YES];
     } else {
         [self showBlurryBackground:NO];
@@ -52,11 +56,15 @@
 - (void)showBlurryBackground:(BOOL)flag
 {
     if(flag) {
-        [_backgroundImageView setHidden:YES];
-        [_blurryBackgroundImageView setHidden:NO];
+        if (_i >= 0.0 && _i < 1.0) {
+            _i += alphaConstant;
+            _blurryBackgroundImageView.alpha = _i;
+        }
     } else {
-        [_backgroundImageView setHidden:NO];
-        [_blurryBackgroundImageView setHidden:YES];
+        if (_i <= 1.1 && _i >= 0.1) {
+            _i -= alphaConstant;
+            _blurryBackgroundImageView.alpha = _i;
+        }
     }
 }
 
@@ -82,9 +90,8 @@
 - (void)fadeAnimation:(UIImageView *)imageView
 {
     imageView.alpha = 0;
-    
     [UIView beginAnimations:@"fade in" context:nil];
-    [imageView setAnimationDuration:3.0];
+    [imageView setAnimationDuration:1.0];
     imageView.alpha = 1.0;
     [UIView commitAnimations];
 }

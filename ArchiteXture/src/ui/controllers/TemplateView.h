@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
  
-@interface Template_VC : UIView <UIScrollViewDelegate>
+@interface TemplateView : UIView <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *allRingsScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *carouselSV;
 @property (weak, nonatomic) IBOutlet UIScrollView *productSV;
 
-@property (nonatomic, assign) CGFloat alpha;
+@property (nonatomic, assign) CGPoint scrollViewLastPosition;
 
 @property (weak, nonatomic) IBOutlet UIImageView *titleImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *infoImageView;
